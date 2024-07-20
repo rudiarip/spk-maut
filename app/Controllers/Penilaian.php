@@ -42,7 +42,7 @@ class Penilaian extends BaseController
         $no          = $start + 1;
         foreach ($result as $key => $r) :
 
-            $aksi = '<a href="javascript:;" class="btn btn-warning btn-sm bedit" onclick="editData(\'' . $r->id . '\', \'' . $r->nama_alternatif . '\')"><i class="fa fa-edit nav-icon"></i> Edit</a>';
+            $aksi = '<a href="javascript:;" class="btn btn-warning btn-sm bedit" onclick="editData(\'' . $r->id . '\')"><i class="fa fa-edit nav-icon"></i> Edit</a>';
             // $aksi .= ' <a href="javascript:;" class="btn btn-danger btn-sm bhapus" data="' . $r['id'] . '"><i class="fa fa-trash nav-icon"></i></a>';
 
             $data[$key][]    = $no++;
