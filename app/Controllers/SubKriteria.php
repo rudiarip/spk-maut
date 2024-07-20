@@ -44,8 +44,8 @@ class SubKriteria extends BaseController
             }
         }
 
-        $data['dataKriteria'] = $data;
-        return view('admin/page/v_sub_kriteria_table', $data);
+        $data2['dataKriteria'] = $data;
+        return view('admin/page/v_sub_kriteria_table', $data2);
     }
 
     // public function datatables()

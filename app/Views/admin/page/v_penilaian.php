@@ -8,7 +8,7 @@
                     <thead>
                         <tr>
                             <th>No</th>
-                            <th>Nama</th>
+                            <th>Nama Alternatif</th>
                             <th>Opsi</th>
                         </tr>
                     </thead>
@@ -26,10 +26,11 @@
         <div class="modal-content">
             <form enctype="multipart/form-data" id="inputform">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="modalLabel"></h5>
+                    <h5 class="modal-title" id="modalLabel">Isi Penilaian</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
+                    <input type="hidden" id="id_alternatif" name="id_alternatif">
                     <div id="isiModal"></div>
                 </div>
                 <!-- <div class="modal-footer">

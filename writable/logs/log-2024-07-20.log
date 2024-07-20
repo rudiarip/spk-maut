@@ -334,3 +334,117 @@ INFO - 2024-07-20 15:34:28 --> Session: Class initialized using 'CodeIgniter\Ses
 INFO - 2024-07-20 15:34:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-07-20 15:34:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-07-20 15:34:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 15:42:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 15:42:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 15:42:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 15:42:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 15:44:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 15:49:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 15:49:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 15:49:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 15:50:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 15:51:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 15:52:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 15:52:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 16:04:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-07-20 16:04:16 --> mysqli_sql_exception: Unknown column 'sk.nama_sub' in 'field list' in E:\laragon\www\spk-maut\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\laragon\www\spk-maut\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `sk`.`id...', 0)
+#1 E:\laragon\www\spk-maut\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `sk`.`id...')
+#2 E:\laragon\www\spk-maut\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `sk`.`id...')
+#3 E:\laragon\www\spk-maut\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `sk`.`id...', Array, false)
+#4 E:\laragon\www\spk-maut\app\Models\PenilaianModel.php(137): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\laragon\www\spk-maut\app\Controllers\Penilaian.php(31): App\Models\PenilaianModel->getSubKriteria()
+#6 E:\laragon\www\spk-maut\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\Penilaian->loadModal()
+#7 E:\laragon\www\spk-maut\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penilaian))
+#8 E:\laragon\www\spk-maut\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\laragon\www\spk-maut\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-07-20 16:04:16 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'sk.nama_sub' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `sk`.`id_sub`, `sk`.`nama_sub`, `sk`.`nilai_sub`, `k`.`id` as `id_kriteria`, CONCAT(k.kode, \' (\', `k`.`nama`, \')\') as kriteria
+FROM `tbl_penilaian` `sk`
+LEFT JOIN `tbl_kriteria` `k` ON `sk`.`id_kriteria`=`k`.`id`', [], false)
+ 2 APPPATH\Models\PenilaianModel.php(137): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Penilaian.php(31): App\Models\PenilaianModel->getSubKriteria()
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Penilaian->loadModal()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penilaian))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-20 16:04:16 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'sk.nama_sub' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `sk`.`id_sub`, `sk`.`nama_sub`, `sk`.`nilai_sub`, `k`.`id` as `id_kriteria`, CONCAT(k.kode, \' (\', `k`.`nama`, \')\') as kriteria
+FROM `tbl_penilaian` `sk`
+LEFT JOIN `tbl_kriteria` `k` ON `sk`.`id_kriteria`=`k`.`id`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `sk`.`id_sub`, `sk`.`nama_sub`, `sk`.`nilai_sub`, `k`.`id` as `id_kriteria`, CONCAT(k.kode, \' (\', `k`.`nama`, \')\') as kriteria
+FROM `tbl_penilaian` `sk`
+LEFT JOIN `tbl_kriteria` `k` ON `sk`.`id_kriteria`=`k`.`id`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `sk`.`id_sub`, `sk`.`nama_sub`, `sk`.`nilai_sub`, `k`.`id` as `id_kriteria`, CONCAT(k.kode, \' (\', `k`.`nama`, \')\') as kriteria
+FROM `tbl_penilaian` `sk`
+LEFT JOIN `tbl_kriteria` `k` ON `sk`.`id_kriteria`=`k`.`id`', [], false)
+ 4 APPPATH\Models\PenilaianModel.php(137): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Penilaian.php(31): App\Models\PenilaianModel->getSubKriteria()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Penilaian->loadModal()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penilaian))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-20 16:04:16 --> [Caused by] mysqli_sql_exception: Unknown column 'sk.nama_sub' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `sk`.`id_sub`, `sk`.`nama_sub`, `sk`.`nilai_sub`, `k`.`id` as `id_kriteria`, CONCAT(k.kode, \' (\', `k`.`nama`, \')\') as kriteria
+FROM `tbl_penilaian` `sk`
+LEFT JOIN `tbl_kriteria` `k` ON `sk`.`id_kriteria`=`k`.`id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `sk`.`id_sub`, `sk`.`nama_sub`, `sk`.`nilai_sub`, `k`.`id` as `id_kriteria`, CONCAT(k.kode, \' (\', `k`.`nama`, \')\') as kriteria
+FROM `tbl_penilaian` `sk`
+LEFT JOIN `tbl_kriteria` `k` ON `sk`.`id_kriteria`=`k`.`id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `sk`.`id_sub`, `sk`.`nama_sub`, `sk`.`nilai_sub`, `k`.`id` as `id_kriteria`, CONCAT(k.kode, \' (\', `k`.`nama`, \')\') as kriteria
+FROM `tbl_penilaian` `sk`
+LEFT JOIN `tbl_kriteria` `k` ON `sk`.`id_kriteria`=`k`.`id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `sk`.`id_sub`, `sk`.`nama_sub`, `sk`.`nilai_sub`, `k`.`id` as `id_kriteria`, CONCAT(k.kode, \' (\', `k`.`nama`, \')\') as kriteria
+FROM `tbl_penilaian` `sk`
+LEFT JOIN `tbl_kriteria` `k` ON `sk`.`id_kriteria`=`k`.`id`', [], false)
+ 5 APPPATH\Models\PenilaianModel.php(137): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Penilaian.php(31): App\Models\PenilaianModel->getSubKriteria()
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Penilaian->loadModal()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penilaian))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-07-20 16:14:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 16:19:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-07-20 16:26:00 --> ErrorException: Undefined property: App\Controllers\Penilaian::$session
+in APPPATH\Controllers\Penilaian.php on line 95.
+ 1 APPPATH\Controllers\Penilaian.php(95): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Penilaian::$session', 'E:\\laragon\\www\\spk-maut\\app\\Controllers\\Penilaian.php', 95)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Penilaian->store()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penilaian))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-20 16:28:34 --> ErrorException: Undefined property: App\Controllers\Penilaian::$db
+in APPPATH\Controllers\Penilaian.php on line 114.
+ 1 APPPATH\Controllers\Penilaian.php(114): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Penilaian::$db', 'E:\\laragon\\www\\spk-maut\\app\\Controllers\\Penilaian.php', 114)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Penilaian->store()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penilaian))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-20 16:30:34 --> Error: Call to undefined method CodeIgniter\Database\MySQLi\Connection::insert_batch()
+in APPPATH\Models\PenilaianModel.php on line 154.
+ 1 APPPATH\Controllers\Penilaian.php(114): App\Models\PenilaianModel->insert_batch('tbl_penilaian', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Penilaian->store()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penilaian))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-07-20 16:34:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-07-20 16:36:12 --> TypeError: CodeIgniter\Database\BaseBuilder::insertBatch(): Argument #2 ($escape) must be of type ?bool, array given, called in E:\laragon\www\spk-maut\app\Models\PenilaianModel.php on line 156
+in SYSTEMPATH\Database\BaseBuilder.php on line 2170.
+ 1 APPPATH\Models\PenilaianModel.php(156): CodeIgniter\Database\BaseBuilder->insertBatch('tbl_penilaian', [...])
+ 2 APPPATH\Controllers\Penilaian.php(114): App\Models\PenilaianModel->insert_batch('tbl_penilaian', [...])
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Penilaian->store()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penilaian))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-20 16:37:15 --> TypeError: CodeIgniter\Database\BaseBuilder::insertBatch(): Argument #2 ($escape) must be of type ?bool, array given, called in E:\laragon\www\spk-maut\app\Models\PenilaianModel.php on line 156
+in SYSTEMPATH\Database\BaseBuilder.php on line 2170.
+ 1 APPPATH\Models\PenilaianModel.php(156): CodeIgniter\Database\BaseBuilder->insertBatch('tbl_penilaian', [...])
+ 2 APPPATH\Controllers\Penilaian.php(114): App\Models\PenilaianModel->insert_batch('tbl_penilaian', [...])
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Penilaian->store()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penilaian))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

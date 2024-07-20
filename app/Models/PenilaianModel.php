@@ -96,7 +96,8 @@ class PenilaianModel extends Model
 
     public function results($rowperpage, $start, $searchValue)
     {
-        $builder = $this->db->table('tbl_alternatif');
+        $builder = $this->db->table('tbl_alternatif a')
+            ->select('a.*, (SELECT id FROM tbl_penilaian WHERE id_alternatif = a.id LIMIT 1) AS cek_id_penilaian');
 
         if (!empty($searchValue)) {
             $searchValue = strtolower($searchValue);
@@ -124,5 +125,34 @@ class PenilaianModel extends Model
         }
 
         return $builder->countAllResults();
+    }
+
+    public function getSubKriteria()
+    {
+        return $this
+            ->db
+            ->table('tbl_sub_kriteria sk')
+            ->select("sk.id_sub, sk.nama_sub, sk.nilai_sub, k.id as id_kriteria, CONCAT(k.kode, ' (', k.nama, ')') as kriteria")
+            ->join('tbl_kriteria k', 'sk.id_kriteria=k.id', 'left')
+            ->get()
+            ->getResult();
+    }
+
+    public function getPenilaianByAlternatif($id_alternatif)
+    {
+        return $this
+            ->db
+            ->table($this->table)
+            ->select("*")
+            ->where('id_alternatif', $id_alternatif)
+            ->get()
+            ->getResult();
+    }
+
+    public function insert_batch($table, $data)
+    {
+        $db      = \Config\Database::connect();
+        $builder = $db->table($table);
+        return $builder->insertBatch($data);
     }
 }

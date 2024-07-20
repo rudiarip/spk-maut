@@ -26,6 +26,26 @@ class Penilaian extends BaseController
         return view('admin/layout/wrapper', $data);
     }
 
+    public function loadModal()
+    {
+        $results = $this->m_penilaian->getSubKriteria();
+        $data = [];
+        foreach ($results as $r) {
+            $data[$r->kriteria][] = [
+                'id_sub' => $r->id_sub,
+                'nama_sub' => $r->nama_sub,
+                'nilai_sub' => $r->nilai_sub,
+                'id_kriteria' => $r->id_kriteria,
+            ];
+        }
+        // echo "<pre>";
+        // var_dump($data);
+        // exit;
+        $data2['dataSub'] = $data;
+
+        return view('admin/page/v_penilaian_modal', $data2);
+    }
+
     public function datatables()
     {
         $draw   = intval($this->request->getPost("draw"));
@@ -42,8 +62,11 @@ class Penilaian extends BaseController
         $no          = $start + 1;
         foreach ($result as $key => $r) :
 
-            $aksi = '<a href="javascript:;" class="btn btn-warning btn-sm bedit" onclick="editData(\'' . $r->id . '\')"><i class="fa fa-edit nav-icon"></i> Edit</a>';
-            // $aksi .= ' <a href="javascript:;" class="btn btn-danger btn-sm bhapus" data="' . $r['id'] . '"><i class="fa fa-trash nav-icon"></i></a>';
+            if ($r->cek_id_penilaian) {
+                $aksi = '<a href="javascript:;" class="btn btn-warning btn-sm" onclick="loadModal(\'' . $r->id . '\')"><i class="fa fa-edit nav-icon"></i> Edit</a>';
+            } else {
+                $aksi = '<a href="javascript:;" class="btn btn-success btn-sm" onclick="loadModal(\'' . $r->id . '\')"><i class="fa fa-edit nav-icon"></i> Tambah</a>';
+            }
 
             $data[$key][]    = $no++;
             $data[$key][]    = $r->nama_alternatif;
@@ -64,37 +87,64 @@ class Penilaian extends BaseController
 
     public function store()
     {
-        $id    = $this->request->getPost("id_alternatif");
-        $nama  = $this->request->getPost("nama");
+        $id_alternatif  = $this->request->getPost("id_alternatif");
+        $subArr         = $this->request->getPost("sub_kriteria");
+        $now            = date('Y-m-d H:i:s');
+        $user           = 'System';
+        // $user = $this->session->userdata('username') ? $this->session->userdata('username') : 'System';
 
-        if ($id == '') {
-            $param = [
-                'table' => 'tbl_alternatif',
-                'data' => [
-                    'nama_alternatif' => $nama,
-                    "created_at" => date('Y-m-d H:i:s'),
-                    // "created_by" => $this->session->userdata('username'),
-                    "created_by" => 'system',
-                ]
-            ];
+        $getPenilaian = $this->m_penilaian->getPenilaianByAlternatif($id_alternatif);
 
-            $action = $this->m_penilaian->insert_with_param($param);
+        if (empty($getPenilaian)) {
+            $row = [];
+            $allRow = [];
+
+            foreach ($subArr as $s) {
+                $row['id_alternatif'] = $id_alternatif;
+                $row['id_sub'] = $s;
+                $row['created_at'] = $now;
+                $row['created_by'] = $user;
+
+                $allRow[] = $row;
+            }
+
+            $action = $this->m_penilaian->insert_batch('tbl_penilaian', $allRow);
+
+            // echo "<pre>";
+            // var_dump($action);
+            // exit;
         } else {
-            $param = [
-                'table' => 'tbl_alternatif',
-                'data' => [
-                    'nama_alternatif' => $nama,
-                    "updated_at" => date('Y-m-d H:i:s'),
-                    // "updated_by" => $this->session->userdata('username'),
-                    "updated_by" => 'system',
-                ],
-                'where' => [
-                    'id' => $id
-                ]
-            ];
-
-            $action = $this->m_penilaian->update_with_param($param);
+            // $subExist = array_column();
         }
+
+        // if ($id == '') {
+        //     $param = [
+        //         'table' => 'tbl_alternatif',
+        //         'data' => [
+        //             'nama_alternatif' => $nama,
+        //             "created_at" => date('Y-m-d H:i:s'),
+        //             // "created_by" => $this->session->userdata('username'),
+        //             "created_by" => 'system',
+        //         ]
+        //     ];
+
+        //     $action = $this->m_penilaian->insert_with_param($param);
+        // } else {
+        //     $param = [
+        //         'table' => 'tbl_alternatif',
+        //         'data' => [
+        //             'nama_alternatif' => $nama,
+        //             "updated_at" => date('Y-m-d H:i:s'),
+        //             // "updated_by" => $this->session->userdata('username'),
+        //             "updated_by" => 'system',
+        //         ],
+        //         'where' => [
+        //             'id' => $id
+        //         ]
+        //     ];
+
+        //     $action = $this->m_penilaian->update_with_param($param);
+        // }
 
         if ($action) {
             $return = [

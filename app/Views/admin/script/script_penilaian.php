@@ -29,7 +29,7 @@
 
             $.ajax({
                 type: "POST",
-                url: "<?php echo base_url('alternatif/store') ?>",
+                url: "<?php echo base_url('penilaian/store') ?>",
                 data: new FormData(this),
                 processData: false,
                 contentType: false,
@@ -65,16 +65,33 @@
         });
     })
 
-    addData = () => {
-        $('#modalLabel').text('Tambah Data Alternatif');
-        $('.form-input').val('')
-        $('#modal-add').modal('show');
-    }
+    // addData = () => {
+    //     $('#modalLabel').text('Tambah Data Alternatif');
+    //     $('.form-input').val('')
+    //     $('#modal-add').modal('show');
+    // }
 
-    editData = (id, nama) => {
-        $('#modalLabel').text('Edit Data Alternatif');
+    // editData = (id, nama) => {
+    //     $('#modalLabel').text('Edit Data Alternatif');
+    //     $('#modal-add').modal('show');
+    //     $('#id_alternatif').val(id);
+    //     $('#nama').val(nama);
+    // }
+
+    loadModal = (id) => {
+        $('#id_alternatif').val(id)
         $('#modal-add').modal('show');
-        $('#id_alternatif').val(id);
-        $('#nama').val(nama);
+
+        $.ajax({
+            type: "GET",
+            url: "<?= base_url('penilaian/loadModal') ?>",
+            dataType: "HTML",
+            beforeSend: function(data) {
+                $('#isiModal').html('<div class="text-center"><i class="fa fa-spinner fa-spin fa-3x fa-fw"></i><span class="sr-only"> LOADING...</span></div>')
+            },
+            success: function(data) {
+                $('#isiModal').html(data);
+            }
+        });
     }
 </script>
