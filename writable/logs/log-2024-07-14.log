@@ -1,0 +1,192 @@
+INFO - 2024-07-14 13:41:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-14 13:41:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-14 13:41:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-14 13:42:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-07-14 13:42:25 --> mysqli_sql_exception: Unknown column 'status' in 'field list' in E:\laragon\www\ci4-starter\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\laragon\www\ci4-starter\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `se...', 0)
+#1 E:\laragon\www\ci4-starter\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `se...')
+#2 E:\laragon\www\ci4-starter\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `se...')
+#3 E:\laragon\www\ci4-starter\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `se...', Array, false)
+#4 E:\laragon\www\ci4-starter\app\Models\UserModel.php(77): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 E:\laragon\www\ci4-starter\app\Controllers\User.php(122): App\Models\UserModel->insert_with_param(Array)
+#6 E:\laragon\www\ci4-starter\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\User->store()
+#7 E:\laragon\www\ci4-starter\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#8 E:\laragon\www\ci4-starter\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\laragon\www\ci4-starter\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-07-14 13:42:25 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'status' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `set_user` (`username`, `id_group`, `email`, `password`, `status`, `created_at`, `created_by`, `photo`) VALUES (:username:, :id_group:, :email:, :password:, :status:, :created_at:, :created_by:, :photo:)', [...], false)
+ 2 APPPATH\Models\UserModel.php(77): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\User.php(122): App\Models\UserModel->insert_with_param([...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->store()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-14 13:42:25 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'status' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `set_user` (`username`, `id_group`, `email`, `password`, `status`, `created_at`, `created_by`, `photo`) VALUES (\'rudiap\', NULL, \'pointajibiji@gmail.com\', \'$2y$10$Ouf60B4CZxbRKHV.OzA83OpnTt66nKqZnlXI.NjZZzAya.a8wH4M6\', \'1\', \'2024-07-14 13:42:25\', \'system\', \'default.jpg\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `set_user` (`username`, `id_group`, `email`, `password`, `status`, `created_at`, `created_by`, `photo`) VALUES (\'rudiap\', NULL, \'pointajibiji@gmail.com\', \'$2y$10$Ouf60B4CZxbRKHV.OzA83OpnTt66nKqZnlXI.NjZZzAya.a8wH4M6\', \'1\', \'2024-07-14 13:42:25\', \'system\', \'default.jpg\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `set_user` (`username`, `id_group`, `email`, `password`, `status`, `created_at`, `created_by`, `photo`) VALUES (:username:, :id_group:, :email:, :password:, :status:, :created_at:, :created_by:, :photo:)', [...], false)
+ 4 APPPATH\Models\UserModel.php(77): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 APPPATH\Controllers\User.php(122): App\Models\UserModel->insert_with_param([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->store()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-14 13:42:25 --> [Caused by] mysqli_sql_exception: Unknown column 'status' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `set_user` (`username`, `id_group`, `email`, `password`, `status`, `created_at`, `created_by`, `photo`) VALUES (\'rudiap\', NULL, \'pointajibiji@gmail.com\', \'$2y$10$Ouf60B4CZxbRKHV.OzA83OpnTt66nKqZnlXI.NjZZzAya.a8wH4M6\', \'1\', \'2024-07-14 13:42:25\', \'system\', \'default.jpg\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `set_user` (`username`, `id_group`, `email`, `password`, `status`, `created_at`, `created_by`, `photo`) VALUES (\'rudiap\', NULL, \'pointajibiji@gmail.com\', \'$2y$10$Ouf60B4CZxbRKHV.OzA83OpnTt66nKqZnlXI.NjZZzAya.a8wH4M6\', \'1\', \'2024-07-14 13:42:25\', \'system\', \'default.jpg\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `set_user` (`username`, `id_group`, `email`, `password`, `status`, `created_at`, `created_by`, `photo`) VALUES (\'rudiap\', NULL, \'pointajibiji@gmail.com\', \'$2y$10$Ouf60B4CZxbRKHV.OzA83OpnTt66nKqZnlXI.NjZZzAya.a8wH4M6\', \'1\', \'2024-07-14 13:42:25\', \'system\', \'default.jpg\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `set_user` (`username`, `id_group`, `email`, `password`, `status`, `created_at`, `created_by`, `photo`) VALUES (:username:, :id_group:, :email:, :password:, :status:, :created_at:, :created_by:, :photo:)', [...], false)
+ 5 APPPATH\Models\UserModel.php(77): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Controllers\User.php(122): App\Models\UserModel->insert_with_param([...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->store()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-07-14 13:42:30 --> mysqli_sql_exception: Unknown column 'status' in 'field list' in E:\laragon\www\ci4-starter\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\laragon\www\ci4-starter\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `se...', 0)
+#1 E:\laragon\www\ci4-starter\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `se...')
+#2 E:\laragon\www\ci4-starter\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `se...')
+#3 E:\laragon\www\ci4-starter\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `se...', Array, false)
+#4 E:\laragon\www\ci4-starter\app\Models\UserModel.php(77): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 E:\laragon\www\ci4-starter\app\Controllers\User.php(122): App\Models\UserModel->insert_with_param(Array)
+#6 E:\laragon\www\ci4-starter\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\User->store()
+#7 E:\laragon\www\ci4-starter\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#8 E:\laragon\www\ci4-starter\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\laragon\www\ci4-starter\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-07-14 13:42:30 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'status' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `set_user` (`username`, `id_group`, `email`, `password`, `status`, `created_at`, `created_by`, `photo`) VALUES (:username:, :id_group:, :email:, :password:, :status:, :created_at:, :created_by:, :photo:)', [...], false)
+ 2 APPPATH\Models\UserModel.php(77): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\User.php(122): App\Models\UserModel->insert_with_param([...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->store()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-14 13:42:30 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'status' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `set_user` (`username`, `id_group`, `email`, `password`, `status`, `created_at`, `created_by`, `photo`) VALUES (\'rudiap\', NULL, \'pointajibiji@gmail.com\', \'$2y$10$O.4JT9cU.On2fD1YnZVP2uxg3BG6w6/0TB5XSmWlYxtf4jnljC6QG\', \'1\', \'2024-07-14 13:42:30\', \'system\', \'default.jpg\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `set_user` (`username`, `id_group`, `email`, `password`, `status`, `created_at`, `created_by`, `photo`) VALUES (\'rudiap\', NULL, \'pointajibiji@gmail.com\', \'$2y$10$O.4JT9cU.On2fD1YnZVP2uxg3BG6w6/0TB5XSmWlYxtf4jnljC6QG\', \'1\', \'2024-07-14 13:42:30\', \'system\', \'default.jpg\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `set_user` (`username`, `id_group`, `email`, `password`, `status`, `created_at`, `created_by`, `photo`) VALUES (:username:, :id_group:, :email:, :password:, :status:, :created_at:, :created_by:, :photo:)', [...], false)
+ 4 APPPATH\Models\UserModel.php(77): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 APPPATH\Controllers\User.php(122): App\Models\UserModel->insert_with_param([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->store()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-14 13:42:30 --> [Caused by] mysqli_sql_exception: Unknown column 'status' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `set_user` (`username`, `id_group`, `email`, `password`, `status`, `created_at`, `created_by`, `photo`) VALUES (\'rudiap\', NULL, \'pointajibiji@gmail.com\', \'$2y$10$O.4JT9cU.On2fD1YnZVP2uxg3BG6w6/0TB5XSmWlYxtf4jnljC6QG\', \'1\', \'2024-07-14 13:42:30\', \'system\', \'default.jpg\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `set_user` (`username`, `id_group`, `email`, `password`, `status`, `created_at`, `created_by`, `photo`) VALUES (\'rudiap\', NULL, \'pointajibiji@gmail.com\', \'$2y$10$O.4JT9cU.On2fD1YnZVP2uxg3BG6w6/0TB5XSmWlYxtf4jnljC6QG\', \'1\', \'2024-07-14 13:42:30\', \'system\', \'default.jpg\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `set_user` (`username`, `id_group`, `email`, `password`, `status`, `created_at`, `created_by`, `photo`) VALUES (\'rudiap\', NULL, \'pointajibiji@gmail.com\', \'$2y$10$O.4JT9cU.On2fD1YnZVP2uxg3BG6w6/0TB5XSmWlYxtf4jnljC6QG\', \'1\', \'2024-07-14 13:42:30\', \'system\', \'default.jpg\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `set_user` (`username`, `id_group`, `email`, `password`, `status`, `created_at`, `created_by`, `photo`) VALUES (:username:, :id_group:, :email:, :password:, :status:, :created_at:, :created_by:, :photo:)', [...], false)
+ 5 APPPATH\Models\UserModel.php(77): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Controllers\User.php(122): App\Models\UserModel->insert_with_param([...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->store()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-07-14 13:42:35 --> mysqli_sql_exception: Unknown column 'status' in 'field list' in E:\laragon\www\ci4-starter\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\laragon\www\ci4-starter\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `se...', 0)
+#1 E:\laragon\www\ci4-starter\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `se...')
+#2 E:\laragon\www\ci4-starter\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `se...')
+#3 E:\laragon\www\ci4-starter\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `se...', Array, false)
+#4 E:\laragon\www\ci4-starter\app\Models\UserModel.php(77): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 E:\laragon\www\ci4-starter\app\Controllers\User.php(122): App\Models\UserModel->insert_with_param(Array)
+#6 E:\laragon\www\ci4-starter\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\User->store()
+#7 E:\laragon\www\ci4-starter\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#8 E:\laragon\www\ci4-starter\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\laragon\www\ci4-starter\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-07-14 13:42:35 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'status' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `set_user` (`username`, `id_group`, `email`, `password`, `status`, `created_at`, `created_by`, `photo`) VALUES (:username:, :id_group:, :email:, :password:, :status:, :created_at:, :created_by:, :photo:)', [...], false)
+ 2 APPPATH\Models\UserModel.php(77): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\User.php(122): App\Models\UserModel->insert_with_param([...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->store()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-14 13:42:35 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'status' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `set_user` (`username`, `id_group`, `email`, `password`, `status`, `created_at`, `created_by`, `photo`) VALUES (\'rudiap\', NULL, \'pointajibiji@gmail.com\', \'$2y$10$.u9mUjnhHry6YlhX2/zGw.us53aiWRQO491FFTPeaQrP6F4HEQB2a\', \'1\', \'2024-07-14 13:42:35\', \'system\', \'default.jpg\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `set_user` (`username`, `id_group`, `email`, `password`, `status`, `created_at`, `created_by`, `photo`) VALUES (\'rudiap\', NULL, \'pointajibiji@gmail.com\', \'$2y$10$.u9mUjnhHry6YlhX2/zGw.us53aiWRQO491FFTPeaQrP6F4HEQB2a\', \'1\', \'2024-07-14 13:42:35\', \'system\', \'default.jpg\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `set_user` (`username`, `id_group`, `email`, `password`, `status`, `created_at`, `created_by`, `photo`) VALUES (:username:, :id_group:, :email:, :password:, :status:, :created_at:, :created_by:, :photo:)', [...], false)
+ 4 APPPATH\Models\UserModel.php(77): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 APPPATH\Controllers\User.php(122): App\Models\UserModel->insert_with_param([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->store()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-14 13:42:35 --> [Caused by] mysqli_sql_exception: Unknown column 'status' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `set_user` (`username`, `id_group`, `email`, `password`, `status`, `created_at`, `created_by`, `photo`) VALUES (\'rudiap\', NULL, \'pointajibiji@gmail.com\', \'$2y$10$.u9mUjnhHry6YlhX2/zGw.us53aiWRQO491FFTPeaQrP6F4HEQB2a\', \'1\', \'2024-07-14 13:42:35\', \'system\', \'default.jpg\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `set_user` (`username`, `id_group`, `email`, `password`, `status`, `created_at`, `created_by`, `photo`) VALUES (\'rudiap\', NULL, \'pointajibiji@gmail.com\', \'$2y$10$.u9mUjnhHry6YlhX2/zGw.us53aiWRQO491FFTPeaQrP6F4HEQB2a\', \'1\', \'2024-07-14 13:42:35\', \'system\', \'default.jpg\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `set_user` (`username`, `id_group`, `email`, `password`, `status`, `created_at`, `created_by`, `photo`) VALUES (\'rudiap\', NULL, \'pointajibiji@gmail.com\', \'$2y$10$.u9mUjnhHry6YlhX2/zGw.us53aiWRQO491FFTPeaQrP6F4HEQB2a\', \'1\', \'2024-07-14 13:42:35\', \'system\', \'default.jpg\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `set_user` (`username`, `id_group`, `email`, `password`, `status`, `created_at`, `created_by`, `photo`) VALUES (:username:, :id_group:, :email:, :password:, :status:, :created_at:, :created_by:, :photo:)', [...], false)
+ 5 APPPATH\Models\UserModel.php(77): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Controllers\User.php(122): App\Models\UserModel->insert_with_param([...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->store()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-07-14 13:45:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-07-14 13:45:27 --> mysqli_sql_exception: Unknown column 'keterangan' in 'field list' in E:\laragon\www\ci4-starter\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\laragon\www\ci4-starter\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `se...', 0)
+#1 E:\laragon\www\ci4-starter\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `se...')
+#2 E:\laragon\www\ci4-starter\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `se...')
+#3 E:\laragon\www\ci4-starter\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `se...', Array, false)
+#4 E:\laragon\www\ci4-starter\app\Models\ModuleModel.php(77): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 E:\laragon\www\ci4-starter\app\Controllers\Module.php(82): App\Models\ModuleModel->insert_with_param(Array)
+#6 E:\laragon\www\ci4-starter\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\Module->store()
+#7 E:\laragon\www\ci4-starter\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Module))
+#8 E:\laragon\www\ci4-starter\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\laragon\www\ci4-starter\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-07-14 13:45:27 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'keterangan' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `set_group` (`nama`, `keterangan`, `created_at`, `created_by`) VALUES (:nama:, :keterangan:, :created_at:, :created_by:)', [...], false)
+ 2 APPPATH\Models\ModuleModel.php(77): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\Module.php(82): App\Models\ModuleModel->insert_with_param([...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Module->store()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Module))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-14 13:45:27 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'keterangan' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `set_group` (`nama`, `keterangan`, `created_at`, `created_by`) VALUES (\'Dashboard\', \'ini buat dashboard\\r\\n\', \'2024-07-14 13:45:27\', \'system\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `set_group` (`nama`, `keterangan`, `created_at`, `created_by`) VALUES (\'Dashboard\', \'ini buat dashboard\\r\\n\', \'2024-07-14 13:45:27\', \'system\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `set_group` (`nama`, `keterangan`, `created_at`, `created_by`) VALUES (:nama:, :keterangan:, :created_at:, :created_by:)', [...], false)
+ 4 APPPATH\Models\ModuleModel.php(77): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 APPPATH\Controllers\Module.php(82): App\Models\ModuleModel->insert_with_param([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Module->store()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Module))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-14 13:45:27 --> [Caused by] mysqli_sql_exception: Unknown column 'keterangan' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `set_group` (`nama`, `keterangan`, `created_at`, `created_by`) VALUES (\'Dashboard\', \'ini buat dashboard\\r\\n\', \'2024-07-14 13:45:27\', \'system\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `set_group` (`nama`, `keterangan`, `created_at`, `created_by`) VALUES (\'Dashboard\', \'ini buat dashboard\\r\\n\', \'2024-07-14 13:45:27\', \'system\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `set_group` (`nama`, `keterangan`, `created_at`, `created_by`) VALUES (\'Dashboard\', \'ini buat dashboard\\r\\n\', \'2024-07-14 13:45:27\', \'system\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `set_group` (`nama`, `keterangan`, `created_at`, `created_by`) VALUES (:nama:, :keterangan:, :created_at:, :created_by:)', [...], false)
+ 5 APPPATH\Models\ModuleModel.php(77): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Controllers\Module.php(82): App\Models\ModuleModel->insert_with_param([...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Module->store()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Module))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-07-14 13:50:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-14 13:54:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-14 13:55:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-14 13:58:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-14 14:11:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-14 14:37:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-14 14:46:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

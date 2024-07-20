@@ -1,0 +1,336 @@
+INFO - 2024-07-20 12:15:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 12:24:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-07-20 12:25:02 --> ErrorException: Undefined array key "nama"
+in APPPATH\Controllers\Alternatif.php on line 49.
+ 1 APPPATH\Controllers\Alternatif.php(49): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nama"', 'E:\\laragon\\www\\spk-maut\\app\\Controllers\\Alternatif.php', 49)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Alternatif->datatables()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Alternatif))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-07-20 12:25:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-07-20 12:25:10 --> ErrorException: Undefined array key "nama"
+in APPPATH\Controllers\Alternatif.php on line 49.
+ 1 APPPATH\Controllers\Alternatif.php(49): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nama"', 'E:\\laragon\\www\\spk-maut\\app\\Controllers\\Alternatif.php', 49)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Alternatif->datatables()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Alternatif))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-07-20 12:25:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 12:26:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 13:10:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 13:13:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 13:15:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 13:15:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 13:15:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 13:16:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 13:16:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 13:16:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 13:17:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 13:17:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-07-20 13:26:12 --> ErrorException: Undefined variable $uri1
+in APPPATH\Views\admin\layout\navigasi.php on line 36.
+ 1 APPPATH\Views\admin\layout\navigasi.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $uri1', 'E:\\laragon\\www\\spk-maut\\app\\Views\\admin\\layout\\navigasi.php', 36)
+ 2 SYSTEMPATH\View\View.php(228): include('E:\\laragon\\www\\spk-maut\\app\\Views\\admin\\layout\\navigasi.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(469): CodeIgniter\View\View->render('admin/layout/navigasi', null, true)
+ 5 APPPATH\Views\admin\layout\wrapper.php(2): CodeIgniter\View\View->include('admin/layout/navigasi')
+ 6 SYSTEMPATH\View\View.php(228): include('E:\\laragon\\www\\spk-maut\\app\\Views\\admin\\layout\\wrapper.php')
+ 7 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/layout/wrapper', [], true)
+ 9 APPPATH\Controllers\SubKriteria.php(25): view('admin/layout/wrapper', [...])
+10 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\SubKriteria->index()
+11 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SubKriteria))
+12 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-07-20 13:26:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 13:29:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 13:29:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 13:29:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-07-20 13:29:32 --> ErrorException: Undefined property: App\Controllers\SubKriteria::$db
+in APPPATH\Controllers\SubKriteria.php on line 18.
+ 1 APPPATH\Controllers\SubKriteria.php(18): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\SubKriteria::$db', 'E:\\laragon\\www\\spk-maut\\app\\Controllers\\SubKriteria.php', 18)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\SubKriteria->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SubKriteria))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-07-20 13:29:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-07-20 13:30:31 --> ErrorException: Undefined property: App\Controllers\SubKriteria::$db
+in APPPATH\Controllers\SubKriteria.php on line 18.
+ 1 APPPATH\Controllers\SubKriteria.php(18): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\SubKriteria::$db', 'E:\\laragon\\www\\spk-maut\\app\\Controllers\\SubKriteria.php', 18)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\SubKriteria->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SubKriteria))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-07-20 13:41:56 --> mysqli_sql_exception: Unknown column 'sk.nnama_sub' in 'field list' in E:\laragon\www\spk-maut\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\laragon\www\spk-maut\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `sk`.`nn...', 0)
+#1 E:\laragon\www\spk-maut\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `sk`.`nn...')
+#2 E:\laragon\www\spk-maut\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `sk`.`nn...')
+#3 E:\laragon\www\spk-maut\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `sk`.`nn...', Array, false)
+#4 E:\laragon\www\spk-maut\app\Models\SubKriteriaModel.php(138): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\laragon\www\spk-maut\app\Controllers\SubKriteria.php(18): App\Models\SubKriteriaModel->getKriteria()
+#6 E:\laragon\www\spk-maut\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\SubKriteria->index()
+#7 E:\laragon\www\spk-maut\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SubKriteria))
+#8 E:\laragon\www\spk-maut\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\laragon\www\spk-maut\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-07-20 13:41:56 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'sk.nnama_sub' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `sk`.`nnama_sub`, `sk`.`nilai_sub`, `sk`.`id_kriteria`, CONCAT(k.kode, \'( \', `k`.`nama`, \' )\') as kriteria
+FROM `tbl_sub_kriteria` `sk`
+LEFT JOIN `tbl_kriteria` `k` ON `sk`.`id_kriteria`=`k`.`id`', [], false)
+ 2 APPPATH\Models\SubKriteriaModel.php(138): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\SubKriteria.php(18): App\Models\SubKriteriaModel->getKriteria()
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\SubKriteria->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SubKriteria))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-20 13:41:56 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'sk.nnama_sub' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `sk`.`nnama_sub`, `sk`.`nilai_sub`, `sk`.`id_kriteria`, CONCAT(k.kode, \'( \', `k`.`nama`, \' )\') as kriteria
+FROM `tbl_sub_kriteria` `sk`
+LEFT JOIN `tbl_kriteria` `k` ON `sk`.`id_kriteria`=`k`.`id`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `sk`.`nnama_sub`, `sk`.`nilai_sub`, `sk`.`id_kriteria`, CONCAT(k.kode, \'( \', `k`.`nama`, \' )\') as kriteria
+FROM `tbl_sub_kriteria` `sk`
+LEFT JOIN `tbl_kriteria` `k` ON `sk`.`id_kriteria`=`k`.`id`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `sk`.`nnama_sub`, `sk`.`nilai_sub`, `sk`.`id_kriteria`, CONCAT(k.kode, \'( \', `k`.`nama`, \' )\') as kriteria
+FROM `tbl_sub_kriteria` `sk`
+LEFT JOIN `tbl_kriteria` `k` ON `sk`.`id_kriteria`=`k`.`id`', [], false)
+ 4 APPPATH\Models\SubKriteriaModel.php(138): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\SubKriteria.php(18): App\Models\SubKriteriaModel->getKriteria()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\SubKriteria->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SubKriteria))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-20 13:41:56 --> [Caused by] mysqli_sql_exception: Unknown column 'sk.nnama_sub' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `sk`.`nnama_sub`, `sk`.`nilai_sub`, `sk`.`id_kriteria`, CONCAT(k.kode, \'( \', `k`.`nama`, \' )\') as kriteria
+FROM `tbl_sub_kriteria` `sk`
+LEFT JOIN `tbl_kriteria` `k` ON `sk`.`id_kriteria`=`k`.`id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `sk`.`nnama_sub`, `sk`.`nilai_sub`, `sk`.`id_kriteria`, CONCAT(k.kode, \'( \', `k`.`nama`, \' )\') as kriteria
+FROM `tbl_sub_kriteria` `sk`
+LEFT JOIN `tbl_kriteria` `k` ON `sk`.`id_kriteria`=`k`.`id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `sk`.`nnama_sub`, `sk`.`nilai_sub`, `sk`.`id_kriteria`, CONCAT(k.kode, \'( \', `k`.`nama`, \' )\') as kriteria
+FROM `tbl_sub_kriteria` `sk`
+LEFT JOIN `tbl_kriteria` `k` ON `sk`.`id_kriteria`=`k`.`id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `sk`.`nnama_sub`, `sk`.`nilai_sub`, `sk`.`id_kriteria`, CONCAT(k.kode, \'( \', `k`.`nama`, \' )\') as kriteria
+FROM `tbl_sub_kriteria` `sk`
+LEFT JOIN `tbl_kriteria` `k` ON `sk`.`id_kriteria`=`k`.`id`', [], false)
+ 5 APPPATH\Models\SubKriteriaModel.php(138): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\SubKriteria.php(18): App\Models\SubKriteriaModel->getKriteria()
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\SubKriteria->index()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SubKriteria))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-07-20 13:51:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 13:52:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 13:53:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 13:53:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 13:54:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 13:54:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 13:54:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 13:57:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 14:00:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 14:01:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 14:04:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 14:06:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 14:06:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-07-20 14:06:50 --> Error: Object of class stdClass could not be converted to string
+in APPPATH\Views\admin\page\v_sub_kriteria_table.php on line 10.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/page/v_sub_kriteria_table', [], true)
+ 4 APPPATH\Controllers\SubKriteria.php(49): view('admin/page/v_sub_kriteria_table', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\SubKriteria->loadTable()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SubKriteria))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-07-20 14:07:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 14:07:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 14:08:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 14:09:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 14:09:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 14:09:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 14:10:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 14:10:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 14:11:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 14:11:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 14:12:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 14:13:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 14:13:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 14:13:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 14:18:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 14:18:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 14:19:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 14:19:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 14:20:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 14:20:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 14:21:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 14:21:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 14:21:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 14:24:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-07-20 14:24:21 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Views\admin\page\v_sub_kriteria_table.php on line 26.
+ 1 APPPATH\Views\admin\page\v_sub_kriteria_table.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'E:\\laragon\\www\\spk-maut\\app\\Views\\admin\\page\\v_sub_kriteria_table.php', 26)
+ 2 SYSTEMPATH\View\View.php(228): include('E:\\laragon\\www\\spk-maut\\app\\Views\\admin\\page\\v_sub_kriteria_table.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/page/v_sub_kriteria_table', [], true)
+ 5 APPPATH\Controllers\SubKriteria.php(49): view('admin/page/v_sub_kriteria_table', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\SubKriteria->loadTable()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SubKriteria))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-07-20 14:25:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 14:26:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 14:27:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 14:27:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 14:28:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-07-20 14:28:25 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Views\admin\page\v_sub_kriteria_table.php on line 27.
+ 1 APPPATH\Views\admin\page\v_sub_kriteria_table.php(27): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'E:\\laragon\\www\\spk-maut\\app\\Views\\admin\\page\\v_sub_kriteria_table.php', 27)
+ 2 SYSTEMPATH\View\View.php(228): include('E:\\laragon\\www\\spk-maut\\app\\Views\\admin\\page\\v_sub_kriteria_table.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/page/v_sub_kriteria_table', [], true)
+ 5 APPPATH\Controllers\SubKriteria.php(53): view('admin/page/v_sub_kriteria_table', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\SubKriteria->loadTable()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SubKriteria))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-07-20 14:28:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-07-20 14:28:41 --> ErrorException: Undefined array key "nama_sub"
+in APPPATH\Views\admin\page\v_sub_kriteria_table.php on line 27.
+ 1 APPPATH\Views\admin\page\v_sub_kriteria_table.php(27): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nama_sub"', 'E:\\laragon\\www\\spk-maut\\app\\Views\\admin\\page\\v_sub_kriteria_table.php', 27)
+ 2 SYSTEMPATH\View\View.php(228): include('E:\\laragon\\www\\spk-maut\\app\\Views\\admin\\page\\v_sub_kriteria_table.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/page/v_sub_kriteria_table', [], true)
+ 5 APPPATH\Controllers\SubKriteria.php(53): view('admin/page/v_sub_kriteria_table', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\SubKriteria->loadTable()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SubKriteria))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-07-20 14:29:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 14:29:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 14:30:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 14:31:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 14:37:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 14:38:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 14:45:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 14:45:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 14:47:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 14:47:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 14:48:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 14:49:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 14:50:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 14:52:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 14:53:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 14:54:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 14:54:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 14:56:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 14:56:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 14:56:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 14:56:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 14:57:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 14:57:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 14:57:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 14:57:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 14:57:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 14:57:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 14:57:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 14:57:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 14:57:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 14:57:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 15:01:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 15:01:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 15:01:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 15:02:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 15:02:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 15:02:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 15:04:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 15:05:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 15:05:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 15:05:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 15:05:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 15:05:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 15:05:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 15:06:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 15:06:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 15:06:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 15:07:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 15:07:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 15:07:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 15:08:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 15:08:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 15:08:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 15:08:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 15:08:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 15:09:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 15:15:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-07-20 15:15:42 --> mysqli_sql_exception: Table 'db_spk_maut.tbl_penilaian' doesn't exist in E:\laragon\www\spk-maut\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\laragon\www\spk-maut\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\laragon\www\spk-maut\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\laragon\www\spk-maut\vendor\codeigniter4\framework\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\laragon\www\spk-maut\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\laragon\www\spk-maut\app\Models\PenilaianModel.php(108): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\laragon\www\spk-maut\app\Controllers\Penilaian.php(36): App\Models\PenilaianModel->results(10, 0, '')
+#6 E:\laragon\www\spk-maut\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\Penilaian->datatables()
+#7 E:\laragon\www\spk-maut\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penilaian))
+#8 E:\laragon\www\spk-maut\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\laragon\www\spk-maut\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-07-20 15:15:42 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_spk_maut.tbl_penilaian' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_penilaian`
+ LIMIT 10', [], false)
+ 2 APPPATH\Models\PenilaianModel.php(108): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Penilaian.php(36): App\Models\PenilaianModel->results(10, 0, '')
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Penilaian->datatables()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penilaian))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-20 15:15:42 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_spk_maut.tbl_penilaian' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tbl_penilaian`
+ LIMIT 10')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tbl_penilaian`
+ LIMIT 10')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_penilaian`
+ LIMIT 10', [], false)
+ 4 APPPATH\Models\PenilaianModel.php(108): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Penilaian.php(36): App\Models\PenilaianModel->results(10, 0, '')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Penilaian->datatables()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penilaian))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-07-20 15:15:42 --> [Caused by] mysqli_sql_exception: Table 'db_spk_maut.tbl_penilaian' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `tbl_penilaian`
+ LIMIT 10', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tbl_penilaian`
+ LIMIT 10')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tbl_penilaian`
+ LIMIT 10')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_penilaian`
+ LIMIT 10', [], false)
+ 5 APPPATH\Models\PenilaianModel.php(108): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Penilaian.php(36): App\Models\PenilaianModel->results(10, 0, '')
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Penilaian->datatables()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penilaian))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-07-20 15:31:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 15:34:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 15:34:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 15:34:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 15:34:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 15:34:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 15:34:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-07-20 15:34:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
