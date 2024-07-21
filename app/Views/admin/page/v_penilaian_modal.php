@@ -5,7 +5,7 @@ foreach ($dataSub as $key => $value) { ?>
         <select class="form-control" name="sub_kriteria[]" id="sub_kriteria_<?= $no ?>" required>
             <option value="" selected disabled>-- Pilih --</option>
             <?php foreach ($value as $val) { ?>
-                <option value="<?= $val['id_sub'] ?>"><?= $val['nama_sub'] ?></option>
+                <option value="<?= $val['id_sub'] ?>" <?= in_array($val['id_sub'], $penilaian) ? 'selected' : ''; ?>><?= $val['nama_sub'] ?></option>
             <?php } ?>
         </select>
     </div>

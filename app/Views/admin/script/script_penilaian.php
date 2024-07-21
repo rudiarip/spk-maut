@@ -45,7 +45,7 @@
 
                         toastr.success(response.message);
 
-                        $('#alternatif').DataTable().ajax.reload();
+                        $('#penilaian').DataTable().ajax.reload();
                         $('#modal-add').modal('hide');
                     } else {
                         toastr.error(response.message);
@@ -83,8 +83,11 @@
         $('#modal-add').modal('show');
 
         $.ajax({
-            type: "GET",
+            type: "POST",
             url: "<?= base_url('penilaian/loadModal') ?>",
+            data: {
+                id_alternatif: id
+            },
             dataType: "HTML",
             beforeSend: function(data) {
                 $('#isiModal').html('<div class="text-center"><i class="fa fa-spinner fa-spin fa-3x fa-fw"></i><span class="sr-only"> LOADING...</span></div>')

@@ -28,6 +28,9 @@ class Penilaian extends BaseController
 
     public function loadModal()
     {
+        $id_alternatif = $this->request->getPost("id_alternatif");
+
+        ### Get sub kriteria
         $results = $this->m_penilaian->getSubKriteria();
         $data = [];
         foreach ($results as $r) {
@@ -38,10 +41,13 @@ class Penilaian extends BaseController
                 'id_kriteria' => $r->id_kriteria,
             ];
         }
-        // echo "<pre>";
-        // var_dump($data);
-        // exit;
+
+        ### Get penilaian by id alternatif
+        $results_penilaian = $this->m_penilaian->getPenilaianByAlternatif($id_alternatif);
+        $results_penilaian = array_column($results_penilaian, 'id_sub');
+
         $data2['dataSub'] = $data;
+        $data2['penilaian'] = $results_penilaian;
 
         return view('admin/page/v_penilaian_modal', $data2);
     }
@@ -57,10 +63,10 @@ class Penilaian extends BaseController
         $totalRecords           = $this->m_penilaian->count_all();
         $totalRecordsWithFilter = $this->m_penilaian->total_record_with_filter($search);
 
-        $aksi        = '';
         $data        = [];
         $no          = $start + 1;
         foreach ($result as $key => $r) :
+            $aksi        = '';
 
             if ($r->cek_id_penilaian) {
                 $aksi = '<a href="javascript:;" class="btn btn-warning btn-sm" onclick="loadModal(\'' . $r->id . '\')"><i class="fa fa-edit nav-icon"></i> Edit</a>';
@@ -68,9 +74,9 @@ class Penilaian extends BaseController
                 $aksi = '<a href="javascript:;" class="btn btn-success btn-sm" onclick="loadModal(\'' . $r->id . '\')"><i class="fa fa-edit nav-icon"></i> Tambah</a>';
             }
 
-            $data[$key][]    = $no++;
-            $data[$key][]    = $r->nama_alternatif;
-            $data[$key][]    = $aksi;
+            $data[$key][]  = $no++;
+            $data[$key][]  = $r->nama_alternatif;
+            $data[$key][]  = $aksi;
 
         endforeach;
 
@@ -87,6 +93,7 @@ class Penilaian extends BaseController
 
     public function store()
     {
+        $db = db_connect();
         $id_alternatif  = $this->request->getPost("id_alternatif");
         $subArr         = $this->request->getPost("sub_kriteria");
         $now            = date('Y-m-d H:i:s');
@@ -109,44 +116,48 @@ class Penilaian extends BaseController
             }
 
             $action = $this->m_penilaian->insert_batch('tbl_penilaian', $allRow);
-
-            // echo "<pre>";
-            // var_dump($action);
-            // exit;
         } else {
-            // $subExist = array_column();
+            $subExist = array_column($getPenilaian, 'id_sub');
+
+            ### Delete data yang Sub IDnya tidak ada di $subArr
+            $db->table('tbl_penilaian')
+                ->where('id_alternatif', $id_alternatif)
+                ->whereNotIn('id_sub', $subArr)
+                ->delete();
+            ###
+
+            foreach ($subArr as $id) {
+
+                if (in_array($id, $subExist)) {
+
+                    $data = [
+                        'id_alternatif' => $id_alternatif,
+                        'id_sub'        => $id,
+                        'updated_at'    => $now,
+                        'updated_by'    => $user
+                    ];
+
+                    $builder = $db->table('tbl_penilaian')
+                        ->where('id_alternatif', $id_alternatif)
+                        ->where('id_sub', $id)
+                        ->update($data);
+                    $action = $db->affectedRows();
+                } else {
+                    $data = [
+                        'id_alternatif' => $id_alternatif,
+                        'id_sub'        => $id,
+                        'created_at'    => $now,
+                        'created_by'    => $user
+                    ];
+
+                    $builder = $db->table('tbl_penilaian');
+                    $builder->insert($data);
+                    $action = $db->affectedRows();
+                }
+            }
         }
 
-        // if ($id == '') {
-        //     $param = [
-        //         'table' => 'tbl_alternatif',
-        //         'data' => [
-        //             'nama_alternatif' => $nama,
-        //             "created_at" => date('Y-m-d H:i:s'),
-        //             // "created_by" => $this->session->userdata('username'),
-        //             "created_by" => 'system',
-        //         ]
-        //     ];
-
-        //     $action = $this->m_penilaian->insert_with_param($param);
-        // } else {
-        //     $param = [
-        //         'table' => 'tbl_alternatif',
-        //         'data' => [
-        //             'nama_alternatif' => $nama,
-        //             "updated_at" => date('Y-m-d H:i:s'),
-        //             // "updated_by" => $this->session->userdata('username'),
-        //             "updated_by" => 'system',
-        //         ],
-        //         'where' => [
-        //             'id' => $id
-        //         ]
-        //     ];
-
-        //     $action = $this->m_penilaian->update_with_param($param);
-        // }
-
-        if ($action) {
+        if ($action > 0) {
             $return = [
                 'status' => TRUE,
                 'message' => 'Berhasil menyimpan data'

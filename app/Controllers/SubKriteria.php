@@ -15,7 +15,6 @@ class SubKriteria extends BaseController
 
     public function index()
     {
-        $subKriteria = $this->m_sub_kriteria->getKriteria();
         $data = [
             'judul'     => 'Sub Kriteria',
             'subjudul'  => 'List Sub Kriteria',
@@ -150,32 +149,32 @@ class SubKriteria extends BaseController
         return;
     }
 
-    public function getEdit()
-    {
-        $id = $this->request->getPost("id");
+    // public function getEdit()
+    // {
+    //     $id = $this->request->getPost("id");
 
-        $param = [
-            'table' => 'tbl_kriteria',
-            'where' => [
-                'id' => $id
-            ]
-        ];
+    //     $param = [
+    //         'table' => 'tbl_kriteria',
+    //         'where' => [
+    //             'id' => $id
+    //         ]
+    //     ];
 
-        $result = $this->m_sub_kriteria->select_with_param_row($param);
+    //     $result = $this->m_sub_kriteria->select_with_param_row($param);
 
-        if ($result) {
-            $return = [
-                'data' => $result,
-                'status' => TRUE,
-                'message' => 'Berhasil Ambil Data'
-            ];
-        } else {
-            $return = [
-                'status' => FALSE,
-                'message' => 'Gagal Ambil Data'
-            ];
-        }
-        echo json_encode($return);
-        return;
-    }
+    //     if ($result) {
+    //         $return = [
+    //             'data' => $result,
+    //             'status' => TRUE,
+    //             'message' => 'Berhasil Ambil Data'
+    //         ];
+    //     } else {
+    //         $return = [
+    //             'status' => FALSE,
+    //             'message' => 'Gagal Ambil Data'
+    //         ];
+    //     }
+    //     echo json_encode($return);
+    //     return;
+    // }
 }

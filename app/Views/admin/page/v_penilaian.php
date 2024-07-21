@@ -9,7 +9,7 @@
                         <tr>
                             <th>No</th>
                             <th>Nama Alternatif</th>
-                            <th>Opsi</th>
+                            <th>Aksi</th>
                         </tr>
                     </thead>
                     <tbody class="table-border-bottom-0">

@@ -151,7 +151,7 @@ class PenilaianModel extends Model
 
     public function insert_batch($table, $data)
     {
-        $db      = \Config\Database::connect();
+        $db = db_connect();
         $builder = $db->table($table);
         return $builder->insertBatch($data);
     }
