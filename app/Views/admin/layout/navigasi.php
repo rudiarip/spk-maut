@@ -23,8 +23,8 @@
     <ul class="menu-inner py-1">
 
         <!-- Dashboard -->
-        <li class="menu-item">
-            <a href="<?= base_url('admin') ?>" class="menu-link">
+        <li class="menu-item <?= $uri1 === 'dashboard' ? "active" : "" ?>">
+            <a href="<?= base_url('dashboard') ?>" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-home-circle"></i>
                 <div data-i18n="Analytics">Dashboard</div>
             </a>
