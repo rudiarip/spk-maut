@@ -135,6 +135,7 @@ class SubKriteriaModel extends Model
             ->table('tbl_kriteria k')
             ->select("sk.id_sub, sk.nama_sub, sk.nilai_sub, k.id as id_kriteria, CONCAT(k.kode, ' (', k.nama, ')') as kriteria")
             ->join($this->table . ' sk', 'sk.id_kriteria=k.id', 'left')
+            ->orderBy('id')
             ->get()
             ->getResult();
     }
