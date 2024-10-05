@@ -6,14 +6,22 @@ use App\Controllers\BaseController;
 
 class Dashboard extends BaseController
 {
+    protected $db;
+
+    public function __construct()
+    {
+        $this->db = \Config\Database::connect();
+    }
+
     public function index()
     {
-        $db = db_connect();
-
+        // if (session()->get('user_data') == NULL) {
+        //     return redirect()->to(base_url('login'));
+        // }
         $hitung = [
-            'totalKriteria' => $db->table('tbl_kriteria')->countAllResults(),
-            'totalSub' => $db->table('tbl_sub_kriteria')->countAllResults(),
-            'totalAlternatif' => $db->table('tbl_alternatif')->countAllResults(),
+            'totalKriteria' => $this->db->table('tbl_kriteria')->countAllResults(),
+            'totalSub' => $this->db->table('tbl_sub_kriteria')->countAllResults(),
+            'totalAlternatif' => $this->db->table('tbl_alternatif')->countAllResults(),
         ];
 
         $data = [

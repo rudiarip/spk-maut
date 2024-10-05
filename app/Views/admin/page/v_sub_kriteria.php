@@ -1,11 +1,5 @@
 <div class="container-xxl flex-grow-1 container-p-y">
-    <!-- <h4 class="fw-semibold py-3 mb-4"><span class="text-muted fw-light"><= $judul ?> /</span> <= $subjudul ?></h4> -->
-    <div class="card mb-4">
-        <h5 class="card-header"></span> <?= $subjudul ?></h5>
-        <div class="card-body">
-            <div id="isiTable"></div>
-        </div>
-    </div>
+    <div id="isiTable"></div>
 </div>
 
 <!-- Modal -->

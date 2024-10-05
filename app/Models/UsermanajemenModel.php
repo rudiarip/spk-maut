@@ -4,7 +4,7 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class UserModel extends Model
+class UsermanajemenModel extends Model
 {
     protected $table            = 'tbl_login';
     protected $primaryKey       = 'id';
@@ -12,17 +12,33 @@ class UserModel extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields = [
-        'username',
-        'password',
-        'status',
-        'level',
-        'nama',
-        'last_login'
-    ];
+    protected $allowedFields    = [];
 
     protected bool $allowEmptyInserts = false;
 
+    // Dates
+    protected $useTimestamps = false;
+    protected $dateFormat    = 'datetime';
+    protected $createdField  = 'created_at';
+    protected $updatedField  = 'updated_at';
+    protected $deletedField  = 'deleted_at';
+
+    // Validation
+    protected $validationRules      = [];
+    protected $validationMessages   = [];
+    protected $skipValidation       = false;
+    protected $cleanValidationRules = true;
+
+    // Callbacks
+    protected $allowCallbacks = true;
+    protected $beforeInsert   = [];
+    protected $afterInsert    = [];
+    protected $beforeUpdate   = [];
+    protected $afterUpdate    = [];
+    protected $beforeFind     = [];
+    protected $afterFind      = [];
+    protected $beforeDelete   = [];
+    protected $afterDelete    = [];
 
     public function select_with_param($param)
     {
@@ -83,20 +99,19 @@ class UserModel extends Model
         $builder = $this->db->table($this->table);
 
         if (!empty($searchValue)) {
-            $builder->like('username', $searchValue);
-            $builder->orLike('email', $searchValue);
+            $searchValue = strtolower($searchValue);
+            $builder->like('LOWER(username)', $searchValue);
+            $builder->orLike('LOWER(full_name)', $searchValue);
         }
 
-        $builder->where('deleted_at', null);
         $builder->limit($rowperpage, $start);
 
-        return $builder->get()->getResultArray();
+        return $builder->get()->getResult();
     }
 
     public function count_all()
     {
         return $this->db->table($this->table)
-            ->where('deleted_at', null)
             ->countAllResults();
     }
 
@@ -105,11 +120,20 @@ class UserModel extends Model
         $builder = $this->db->table($this->table);
 
         if (!empty($searchValue)) {
-            $builder->like('username', $searchValue);
-            $builder->orLike('email', $searchValue);
+            $searchValue = strtolower($searchValue);
+            $builder->like('LOWER(username)', $searchValue);
+            $builder->orLike('LOWER(full_name)', $searchValue);
         }
-        $builder->where('deleted_at', null);
 
         return $builder->countAllResults();
+    }
+
+    public function cekUsername($username)
+    {
+        $builder = $this->db->table($this->table);
+
+        $builder->select('*');
+        $builder->where('username', $username);
+        return $builder->get()->getRow();
     }
 }

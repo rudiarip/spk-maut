@@ -1,13 +1,13 @@
-<?php $request = service('request'); ?>
+<!-- <php $request = service('request'); ?> -->
 <!-- Menu -->
 
 
 <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
     <div class="app-brand demo">
-        <a href="<?= base_url('admin') ?>" class="app-brand-link">
-            <img src="<?= base_url();  ?>uploads/images.jpg" width="50" alt="" />
+        <a href="<?= base_url() ?>" class="app-brand-link">
+            <img src="<?= base_url('images/default_avatar.png'); ?>" width="50" alt="" />
 
-            <span class="app-brand-text demo menu-text fw-bolder ms-2">Ini Nama</span>
+            <span class="app-brand-text demo menu-text fw-bolder ms-2"><?= session()->get('user_data')['full_name'] ?></span>
         </a>
 
         <!-- <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto d-block d-xl-none">
@@ -57,41 +57,23 @@
                 <div data-i18n="penilaian">Data Penilaian</div>
             </a>
         </li>
-
-        <!-- <li class="menu-item">
-            <a href="javascript:void(0);" class="menu-link menu-toggle">
-                <i class="menu-icon tf-icons bx bx-detail"></i>
-                <div data-i18n="Master Data">Master Data</div>
+        <li class="menu-item <?= $uri1 === 'perhitungan' ? "active" : "" ?>">
+            <a href="<?= base_url('perhitungan') ?>" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-calculator"></i>
+                <div data-i18n="perhitungan">Data Perhitungan</div>
             </a>
-            <ul class="menu-sub">
-                <li>
-                    <a href="<?= base_url('kriteria') ?>" class="menu-link">
-                        <div data-i18n="Data Kriteria">Data Kriteria</div>
-                    </a>
-                </li>
-                <li>
-                    <a href="<?= base_url('sub_kriteria') ?>" class="menu-link">
-                        <div data-i18n="Data Sub Kriteria">Data Sub Kriteria</div>
-                    </a>
-                </li>
-                <li>
-                    <a href="<?= base_url('alternatif') ?>" class="menu-link">
-                        <div data-i18n="Data Alternatif">Data Alternatif</div>
-                    </a>
-                </li>
-            </ul>
-        </li> -->
+        </li>
 
         <li class="menu-header small text-uppercase">
             <span class="menu-header-text">Setting Aplikasi</span>
         </li>
 
-        <li class="menu-item <?= $uri1 === 'setting' ? "active" : "" ?>">
-            <a href="<?= base_url('setting') ?>" class="menu-link">
+        <!-- <li class="menu-item <= $uri1 === 'setting' ? "active" : "" ?>">
+            <a href="<= base_url('setting') ?>" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-cog"></i>
                 <div data-i18n="Boxicons">Setting Website</div>
             </a>
-        </li>
+        </li> -->
         <li class="menu-item <?= $uri1 === 'usermanajemen' ? "active" : "" ?>">
             <a href="<?= base_url('usermanajemen') ?>" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-user"></i>
@@ -157,7 +139,7 @@
                 <li class="nav-item navbar-dropdown dropdown-user dropdown">
                     <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
                         <div class="avatar avatar-online">
-                            <img src="<?= base_url() ?>uploads/images.jpg" alt class="w-px-40 h-auto rounded-circle" />
+                            <img src="<?= base_url('images/default_avatar.png'); ?>" alt class="w-px-40 h-auto rounded-circle" />
                         </div>
                     </a>
                     <ul class="dropdown-menu dropdown-menu-end">
@@ -166,12 +148,12 @@
                                 <div class="d-flex">
                                     <div class="flex-shrink-0 me-3">
                                         <div class="avatar avatar-online">
-                                            <img src="<?= base_url() ?>uploads/images.jpg" alt class="w-px-40 h-auto rounded-circle" />
+                                            <img src="<?= base_url('images/default_avatar.png'); ?>" alt class="w-px-40 h-auto rounded-circle" />
                                         </div>
                                     </div>
                                     <div class="flex-grow-1">
-                                        <span class="fw-semibold d-block">Ini Nama</span>
-                                        <small class="text-muted">Ini User Group</small>
+                                        <span class="fw-semibold d-block"><?= session()->get('user_data')['full_name'] ?></span>
+                                        <small class="text-muted"><?= session()->get('user_data')['level'] ?></small>
                                     </div>
                                 </div>
                             </a>
@@ -188,7 +170,7 @@
                         </li>
 
                         <li>
-                            <a class="dropdown-item" href="<?= base_url('logout') ?>">
+                            <a class="dropdown-item" href="<?= base_url('login/logout') ?>">
                                 <i class="bx bx-power-off me-2"></i>
                                 <span class="align-middle">Log Out</span>
                             </a>
