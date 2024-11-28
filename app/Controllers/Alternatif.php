@@ -73,8 +73,8 @@ class Alternatif extends BaseController
                 'data' => [
                     'nama_alternatif' => $nama,
                     "created_at" => date('Y-m-d H:i:s'),
-                    // "created_by" => $this->session->userdata('username'),
-                    "created_by" => 'system',
+                    "created_by" => session()->get('user_data')['username'],
+                    // "created_by" => 'system',
                 ]
             ];
 
@@ -85,8 +85,8 @@ class Alternatif extends BaseController
                 'data' => [
                     'nama_alternatif' => $nama,
                     "updated_at" => date('Y-m-d H:i:s'),
-                    // "updated_by" => $this->session->userdata('username'),
-                    "updated_by" => 'system',
+                    "updated_by" => session()->get('user_data')['username'],
+                    // "updated_by" => 'system',
                 ],
                 'where' => [
                     'id' => $id

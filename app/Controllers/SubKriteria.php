@@ -101,8 +101,8 @@ class SubKriteria extends BaseController
                     'nama_sub'      => $nama,
                     'nilai_sub'     => $nilai,
                     "created_at" => date('Y-m-d H:i:s'),
-                    // "created_by" => $this->session->userdata('username'),
-                    "created_by" => 'system',
+                    "created_by" => session()->get('user_data')['username'],
+                    // "created_by" => 'system',
                 ]
             ];
 
@@ -114,8 +114,8 @@ class SubKriteria extends BaseController
                     'nama_sub'   => $nama,
                     'nilai_sub'  => $nilai,
                     "updated_at" => date('Y-m-d H:i:s'),
-                    // "updated_by" => $this->session->userdata('username'),
-                    "updated_by" => 'system',
+                    "updated_by" => session()->get('user_data')['username'],
+                    // "updated_by" => 'system',
                 ],
                 'where' => [
                     'id_sub' => $id_sub_kriteria
@@ -148,33 +148,4 @@ class SubKriteria extends BaseController
         echo json_encode($return);
         return;
     }
-
-    // public function getEdit()
-    // {
-    //     $id = $this->request->getPost("id");
-
-    //     $param = [
-    //         'table' => 'tbl_kriteria',
-    //         'where' => [
-    //             'id' => $id
-    //         ]
-    //     ];
-
-    //     $result = $this->m_sub_kriteria->select_with_param_row($param);
-
-    //     if ($result) {
-    //         $return = [
-    //             'data' => $result,
-    //             'status' => TRUE,
-    //             'message' => 'Berhasil Ambil Data'
-    //         ];
-    //     } else {
-    //         $return = [
-    //             'status' => FALSE,
-    //             'message' => 'Gagal Ambil Data'
-    //         ];
-    //     }
-    //     echo json_encode($return);
-    //     return;
-    // }
 }

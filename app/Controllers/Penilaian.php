@@ -96,8 +96,7 @@ class Penilaian extends BaseController
         $id_alternatif  = $this->request->getPost("id_alternatif");
         $subArr         = $this->request->getPost("sub_kriteria");
         $now            = date('Y-m-d H:i:s');
-        $user           = 'System';
-        // $user = $this->session->userdata('username') ? $this->session->userdata('username') : 'System';
+        $user           = session()->get('user_data')['username'] ?? 'System';
 
         $getPenilaian = $this->m_penilaian->getPenilaianByAlternatif($id_alternatif);
 
